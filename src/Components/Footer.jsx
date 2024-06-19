@@ -7,7 +7,7 @@ const Footer = () => {
       <a href="https://github.com/Mr-Yash-01/ProdigyInfoTech/tree/master/PRODIGY_WD_03" target="_blank" rel="noopener noreferrer">
         <LuFileCode2 className='mb-1' />
       </a>
-      <a href="https://github.com/Mr-Yash-01/ProdigyInfoTech/tree/master/PRODIGY_WD_03" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-all hover:underline">
+      <a href="https://github.com/Mr-Yash-01/TIC-TAC-TOE" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-all hover:underline">
         Yash Vadukiya
       </a>
     </div>
