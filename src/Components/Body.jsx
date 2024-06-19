@@ -145,29 +145,41 @@ const Body = () => {
           )}
         </div>
 
-        <div className='flex w-full justify-center items-center mt-20 max-w-5xl'>
-          <div className='grid grid-cols-2 w-2/4 text-center gap-3 md:text-2xl lg:text-2xl'>
+        <div className='flex flex-wrap gap-8 w-full justify-center items-center mt-20 max-w-5xl'>
+          <div className='flex flex-col text-center'>
             <h3>PLAYER 1</h3>
-            <h3>PLAYER 2</h3>
             <h3 id="player1" className='text-2xl md:text-4xl lg:text-4xl'>{score.player1}</h3>
+          </div>
+          <div className='flex flex-col text-center'>
+            <h3>PLAYER 2</h3>
             <h3 id="player2" className='text-2xl md:text-4xl lg:text-4xl'>{score.player2}</h3>
           </div>
-          <div className='w-2/4 grid grid-cols-2 justify-center items-center gap-3 md:text-2xl lg:text-4xl'>
-            <div className='grid grid-cols-1 gap-3 text-center items-center md:text-2xl lg:text-2xl'>
-              <h3>DRAWS</h3>
-              <h3 id="draws" className='text-2xl md:text-4xl lg:text-4xl'>{score.draws}</h3>
+          <div className='flex flex-col text-center'>
+            <h3>DRAWS</h3>
+            <h3 id="draws" className='text-2xl md:text-4xl lg:text-4xl'>{score.draws}</h3>
+          </div>
+          <div className='flex flex-col gap-1 text-center items-center'>
+            <h1 >
+              RESET
+            </h1>
+            <div className='flex gap-4 justify-around'>
+              <button
+                className='py-1 px-1 w-8 h-8 bg-blue-500 text-white rounded-full'
+                onClick={() => {
+                  setBoard([['', '', ''], ['', '', ''], ['', '', '']]);
+                  setTurn(true);
+                  setWinningCells([]);
+                }}>
+                <img className='px-0.5' src='./src/assets/icons8-grid-96.png'></img>
+              </button>
+              <button
+                className='py-1 px-1 w-8 h-8 bg-blue-500 text-white rounded-full'
+                onClick={() => {
+                  setScore({ player1: 0, player2: 0, draws: 0 });
+                }}>
+                <img className='px-0.5' src='./src/assets/icons8-score-64.png'></img>
+              </button>
             </div>
-            <button
-              className='py-2 px-4 bg-blue-500 text-white rounded'
-              onClick={() => {
-                setBoard([['', '', ''], ['', '', ''], ['', '', '']]);
-                setTurn(true);
-                setWinningCells([]);
-              }}
-            >
-              
-              Reset
-            </button>
           </div>
         </div>
       </div>
